@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización Personalizada - GALENO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Cotización Personalizada para tu Cobertura Médica GALENO</h1>
+                
+                <p>Descubre los planes de salud diseñados para proteger lo que más importa. Más del 92% de nuestros afiliados recomiendan GALENO por nuestra excelencia en servicio y cobertura.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">Protección Integral</div>
+                            <div class="benefit-desc">Cobertura en más de 1,200 centros médicos a nivel nacional con los más altos estándares de calidad.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">Asistencia 24/7</div>
+                            <div class="benefit-desc">Servicio de emergencias médicas disponible las 24 horas, los 365 días del año.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <div class="benefit-title">Cobertura Internacional</div>
+                            <div class="benefit-desc">Protección en viajes al exterior con nuestra red de hospitales internacionales asociados.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h2>Solicita tu Cotización</h2>
+            
+            <form id="cotizacionForm" action="guardar_datos.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: María González">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="Ej: maria@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">WhatsApp o teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +54 9 1130031197">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edades">Edades del grupo familiar (separadas por comas)</label>
+                    <input type="text" id="edades" name="edades" required placeholder="Ej: 35, 32, 8, 5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad" name="localidad" required placeholder="Ej: Belgrano">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo-trabajo">Tipo de trabajo</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="en-blanco" name="tipo-trabajo" value="En blanco" required>
+                            <label for="en-blanco">En blanco</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="privado" name="tipo-trabajo" value="Privado">
+                            <label for="privado">Privado</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>¿Quieres que te llamemos?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="llamada_si" name="llamada" value="si" checked>
+                            <label for="llamada_si">Sí, por favor</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="llamada_no" name="llamada" value="no">
+                            <label for="llamada_no">No, prefiero mensaje</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <h3>Selecciona los beneficios adicionales que deseas incluir:</h3>
+                    
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="dental" name="beneficios[]" value="dental">
+                            <label for="dental">Cobertura dental premium</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="vision" name="beneficios[]" value="vision">
+                            <label for="vision">Cobertura oftalmológica</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="deportes" name="beneficios[]" value="deportes">
+                            <label for="deportes">Protección en deportes extremos</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="maternidad" name="beneficios[]" value="maternidad">
+                            <label for="maternidad">Plan maternidad completo</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mental" name="beneficios[]" value="mental">
+                            <label for="mental">Salud mental y terapia</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="rehabilitacion" name="beneficios[]" value="rehabilitacion">
+                            <label for="rehabilitacion">Rehabilitación física</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Obtener cotización ahora
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SweetAlert para mensajes bonitos -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 <?php
 // Configuración de la base de datos
 $host = "localhost";
-$usuario = "root";
-$contrasena = "sofimiamor";
-$base_datos = "vital_salud";
+$usuario = "usuario";
+$contrasena = "pass";
+$base_datos = "database";
 
 // Crear conexión
 $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
